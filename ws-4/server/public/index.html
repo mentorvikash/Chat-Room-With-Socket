@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Socket</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.min.js"
+      integrity="sha512-skuhu6jj+sQnhLq1Txsack8VfnIrX8wL+MTFilYlFFT/NuLJm7eya7zOROs39Jy5cjASMEWqxLzijRVmKhsqWQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <main class="container">
+      <div id="sidebar">
+        <div id="user-list-container">
+          <h2>Active Rooms</h2>
+          <ul id="room-list"></ul>
+        </div>
+        <div id="room-list-container">
+          <h2>Active Users</h2>
+          <ul id="user-list"></ul>
+        </div>
+      </div>
+      <div id="chat-container">
+        <form id="chat-room">
+          <input
+            id="user-name"
+            type="text"
+            placeholder="your name"
+            maxlength="15"
+            minlength="5"
+            required
+          />
+          <input
+            id="room-name"
+            type="text"
+            placeholder="room name"
+            minlength="5"
+            required
+          />
+          <button id="join-button">Join Room</button>
+        </form>
+        <ul class="chat-box"></ul>
+        <p class="activitybox"></p>
+        <form id="message-room">
+          <input id="chat-input" type="text" placeholder="your message" />
+          <button id="chat-send">Send</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
